@@ -46,3 +46,8 @@ variable "region" {
   default     = "us-central1"
   description = "GCP region to deploy resources to"
 }
+
+variable "db_version" {
+  default = "1"
+  description = "Version identifier for Cloud SQL DB name. Names cannot be re-used, so if the gitlab DB is deleted, in order to recreate the gitlab setup a different name needs to be provided, by incrementing the version."
+}
